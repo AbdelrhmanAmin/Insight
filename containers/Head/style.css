@@ -1,0 +1,14 @@
+.Head {
+    text-align: center;
+    margin: 0 auto 15px;
+    width: 800px;
+    background: white;
+}
+.Head p{
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 32px;
+    margin-top: -30px;
+}
+.Head span {
+    color: #ffd800;
+}
