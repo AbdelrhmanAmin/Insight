@@ -16,31 +16,27 @@ class Slider extends Component {
     componentWillMount = () => {
         setInterval(() => {
             this.Next()
-        }, 1000);
+        }, 3000);
     }
     Next = () => {
         let up = true;
         let ceiling = 3;
-        let increment = 1;
         if(up == true && this.state.counter < ceiling){
-            this.setState( () => {this.state.counter+=increment});
+            this.setState( () => {this.state.counter+=1});
             if(this.state.counter < ceiling){
                 up = false
             }
         }else{
             up = false;
-            this.setState( () => {this.state.counter-=increment});
+            console.log('true?')
+            this.setState( () => {this.state.counter-=3});
         }
         this.setState({ currentImg: this.state.imgs[this.state.counter]})
     }
     render() {
-        const target = <img src={this.state.currentImg} />
         return (
          <div className='Slider'>
-            <p>counter: {this.state.counter} <br/>
-            <span>-note: there is a litte bug here.</span>
-            </p>
-            {target}
+            <img src={this.state.currentImg} />
          </div> 
         )
     }

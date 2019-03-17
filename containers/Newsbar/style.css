@@ -1,0 +1,14 @@
+#div{
+    height: 20px;
+    background-color: #ffd800;
+    padding:0 5px;
+    position: relative;
+    /* overflow:hidden; */
+    margin: 0 auto;
+    width: 750px;
+}
+#par {
+    text-align: center;
+    font-family:sans-serif;
+    color:#F9F7F7;
+  }

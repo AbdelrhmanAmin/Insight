@@ -1,6 +1,7 @@
 .Head {
     text-align: center;
-    margin: 0 auto 15px;
+    margin: 0 auto ;
+    border-bottom: 5px solid rgb(136, 136, 136);
     width: 800px;
     background: white;
 }
