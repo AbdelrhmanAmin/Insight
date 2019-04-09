@@ -1,0 +1,8 @@
+#foot {
+    background-color: #FFD800;
+    padding: 30px;
+    border-top: 10px solid black;
+}
+#foot strong {
+    font-size: 26px;
+}

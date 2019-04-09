@@ -1,0 +1,11 @@
+#Pillars ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+#Pillars ul li {
+    border: 5px solid black;
+    height: 490px;
+    display: block;
+}

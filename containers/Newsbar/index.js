@@ -5,7 +5,7 @@ class index extends Component {
         Hijri: []
     }
     componentDidMount = () => {
-        fetch('http://api.aladhan.com/v1/gToHCalendar/3/2019')
+        fetch('http://api.aladhan.com/v1/gToHCalendar/4/2019')
         .then(results => {
             return results.json();
         }).then(res => {
@@ -20,19 +20,14 @@ class index extends Component {
             var day = date.getDate();
             var monthIndex = date.getMonth();
             var year = date.getFullYear();
-            let currDate = day + '-' + monthNames[monthIndex] + '-' + year;
+            let currDate = '0' + day + '-' + monthNames[monthIndex] + '-' + year;
             console.log(currDate);
             let Hijri = res.data.map((x) => {
                 if(x.gregorian.date === currDate){
                 return(
-                    <p>{x.hijri.year} - {x.hijri.month.en} - {x.hijri.day}</p>
+                    <strong id='par'>{x.hijri.year} - {x.hijri.month.en} - {x.hijri.day}</strong>
                 )}
             })
-                            // return(
-                            //     <div key={y.gregorian.date}>
-                            //         <p>{y.hijri.year} - {y.hijri.month.ar}- {y.hijri.day}</p>
-                            //     </div>
-                            // )
             this.setState({Hijri: Hijri})
         })
     }

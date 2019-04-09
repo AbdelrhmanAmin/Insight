@@ -5,7 +5,7 @@ class Head extends Component {
   render() {
     return (
       <div className="Head">
-        <img src={Logo} width='150px'/>
+        <a href="/"><img src={Logo} width='150px'/></a>
         <p>قد جائكم<span>بصائر</span> من ربكم</p>
       </div>
     );

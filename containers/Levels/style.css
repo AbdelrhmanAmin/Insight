@@ -1,0 +1,24 @@
+#contain-level {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    margin: 0 auto;
+    width: 800px;
+}
+#contain-level li {
+    color: white;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: #FFD800; 
+    padding: 40px;
+    font-size: 24px;
+}
+#contain-level li p {
+    background-color: black;
+    padding: 20px;
+    box-shadow: 2px 3px 5px 0px rgba(0,0,0,0.75);
+}
+#contain-level li span {
+    color: white;
+    margin-left: 25px;
+}
