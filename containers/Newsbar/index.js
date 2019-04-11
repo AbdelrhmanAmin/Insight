@@ -20,8 +20,8 @@ class index extends Component {
             var day = date.getDate();
             var monthIndex = date.getMonth();
             var year = date.getFullYear();
-            let currDate = '0' + day + '-' + monthNames[monthIndex] + '-' + year;
-            console.log(currDate);
+            let currDate =  (monthIndex > 8 ? "0" + day + '-' + monthNames[monthIndex] + '-' + year : day + '-' + monthNames[monthIndex] + '-' + year);
+            console.log(monthIndex);
             let Hijri = res.data.map((x) => {
                 if(x.gregorian.date === currDate){
                 return(

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './screens/Home';
 import Insight from './screens/Insight';
+import Video from './screens/Video';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
 class App extends Component {
@@ -15,9 +16,10 @@ class App extends Component {
             <Route  path='/Insight' exact component={Insight} />
             <Route  component={ () => {
               return(
-                <div> <h1>GO BACK <a href="/" style={{color:"red"}}>HOME</a> BOY !</h1> </div>
-              )
-            }} />
+                <div> <h1>This section is not available yet, please go back to <a href="/" style={{color:"red"}}>HOME</a></h1> </div>
+                )
+              }} />
+              <Route  path='/1' exact component={Video} />
       </Switch>
       </div>
           </BrowserRouter>
