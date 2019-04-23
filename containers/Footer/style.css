@@ -1,8 +1,10 @@
 #foot {
     background-color: #FFD800;
     padding: 30px;
+    text-align: center;
     border-top: 10px solid black;
 }
 #foot strong {
     font-size: 26px;
+    text-align: center;
 }

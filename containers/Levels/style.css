@@ -1,3 +1,4 @@
+    
 #contain-level {
     display: flex;
     flex-direction: column;
@@ -12,6 +13,10 @@
     background-color: #FFD800; 
     padding: 40px;
     font-size: 24px;
+}
+#contain-level li a{
+    text-decoration: none;
+    color: white;
 }
 #contain-level li p {
     background-color: black;

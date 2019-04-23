@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './style.css';
+
+
 class index extends Component {
     state = {
-        Hijri: []
+        Hijri: [],
     }
     componentDidMount = () => {
         fetch('http://api.aladhan.com/v1/gToHCalendar/4/2019')
@@ -31,10 +33,16 @@ class index extends Component {
             this.setState({Hijri: Hijri})
         })
     }
+
     render() {
         return (
             <div id='div'>
+            <iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/63224826&color=%23ffd800&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true"></iframe>
                 {this.state.Hijri}
+                    {/* <ul id='form-l'>
+                        <li><button  onClick={this.props.onLogin}>Login</button></li>
+                        <li><button onClick={this.props.onSign} >Sign up</button></li>
+                    </ul> */}
             </div>
         );
     }

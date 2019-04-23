@@ -3,11 +3,17 @@ import './style.css';
 class Innercontent extends Component {
     state = {  
         arr : [
-            'https://www.youtube.com/embed/5j4CWwQdQSo',
-            "https://www.youtube.com/embed/iaacJNE_is8",
-            "https://www.youtube.com/embed/OfkFZowoZxA" ],
+            "https://www.dailymotion.com/embed/video/x5ge5nd" ,
+            "https://www.dailymotion.com/embed/video/x2mz5od" ,
+            "https://www.dailymotion.com/embed/video/x3b7zr2"  ],
         currV: '',
         count: 0,
+        widthx: 50,
+        heightx: 50,
+        widthy: 560,
+        heighty: 560,
+        widthz: 50,
+        heightz: 50,
     }
     componentWillMount = () => {
         this.setState({currV: this.state.arr[this.state.count]})
@@ -27,13 +33,52 @@ class Innercontent extends Component {
         }
         this.setState({ currV: this.state.arr[this.state.count]})
     }
+    widthX = () => {
+        let x = true;
+        if(x === true && this.state.widthx === 50){
+            this.setState({widthx: 560,heightx:560})
+            if(this.state.widthx === 560){
+                x = false;
+            }
+        }else {
+            this.setState({widthx: 50,heightx:50})
+        }
+    }
+    widthY = () => {
+        let y = true;
+        if(y === true && this.state.widthy === 560){
+            this.setState({widthy: 50,heighty:50})
+            if(this.state.widthy === 50){
+                y = false;
+            }
+        }else {
+            this.setState({widthy: 560,heighty:560})
+        }
+    }
+    widthZ = () => {
+        let z = true;
+        if(z=== true && this.state.widthz === 50){
+            this.setState({widthz: 560,heightz:560})
+            if(this.state.widthz === 560){
+                z = false;
+            }
+        }else {
+                this.setState({widthz:50,heightz:50})
+            }
+        }
     render() {
         return (
             <div>
                 <ul id='videoShow'>
-                    <li><iframe width="560" height="315" src={this.state.currV}></iframe></li>
-                <button onClick={this.Vext} id='nextr'>Next</button>
+                    <li><iframe width={this.state.widthy} height={this.state.heighty} src={this.state.currV}></iframe></li>
+                        <button onClick={this.Vext} id='nextr'>Next</button>
                 </ul>
+                        <ul id='vids'>
+                            <li ><iframe width={this.state.widthx} height={this.state.heightx} src={this.state.arr[1]}></iframe>
+                    <button onClick={this.widthX} id='zoom'>ZOOM(in-out)</button></li>
+                            <li><iframe width={this.state.widthz} height={this.state.heightz} src={this.state.arr[2]}></iframe>
+                    <button onClick={this.widthZ} id='zoom'>ZOOM(in-out)</button></li>
+                        </ul>
             </div>
         );
     }

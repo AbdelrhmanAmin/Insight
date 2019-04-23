@@ -1,15 +1,38 @@
 #div{
-    height: 20px;
     background-color: #ffd800;
     padding:0 5px;
     position: relative;
     /* overflow:hidden; */
+    text-align: center;
     margin: 0 auto;
     width: 750px;
 }
 #par {
     text-align: center;
-    color: #DEAD46;
     font-family:sans-serif;
     color:black;
-  }
+}
+#form-l {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#form-l li {
+    margin-right: 20px;
+    font-family:sans-serif;
+    color: black;
+    font-weight: 500;
+}
+#form-l li a {
+    text-decoration: none;
+    color: black;
+}
+#form-l button {
+    font-family:sans-serif;
+    border: 1px solid black;
+    color: white;
+    font-weight: 600;
+    padding: 10px 40px;
+    margin: 10px 20px 20px 20px;
+    background-color: #888888;
+}
