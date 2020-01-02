@@ -3,12 +3,12 @@ import './App.css';
 import Home from './screens/Home';
 import Insight from './screens/Insight';
 import Video from './screens/Video';
+import Tab from './screens/Tab';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
   Redirect,
-  withRouter
 } from 'react-router-dom';
  const fakeAuth = {
   isAuthenticated: false,
@@ -205,10 +205,14 @@ class App extends Component {
             <Route  path='/' exact component={ () => {
               return <Home />
             }} />
+            <Route  path='/Tab' exact component={ () => {
+              return <Tab />
+            }} />
             <Route path="/login" exact component={Login}/>
             <PrivateRoute  path='/Insight' exact component={() => {
               return <Insight name={this.props.firstName} />
             }} />
+
             <Route  path='/1' exact component={() => {
               return <Video name={this.props.firstName} />
             }} />

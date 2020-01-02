@@ -1,3 +1,33 @@
+.Slider {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.centered-x {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -45%);
+}
+.centered h1 {
+    color: #ffd800;
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 120px;
+}
+.centered-x h1 {
+    color: white;
+    opacity: 0.3;
+    font-family: 'Aref Ruqaa', serif;
+    font-size: 120px;
+}
 .Slider img {
     width: 100%;
+    
 }

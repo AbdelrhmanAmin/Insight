@@ -6,7 +6,7 @@ class Head extends Component {
     return (
       <div className="Head">
         <a href="/"><img src={Logo} width='150px'/></a>
-        <p>قد جائكم<span>بصائر</span> من ربكم</p>
+        <p> قد جائكم<span> بصائر </span> من ربكم</p>
       </div>
     );
   }

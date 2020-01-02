@@ -1,22 +1,37 @@
+#grid-vid{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+}
 #videoShow {
-    display: flex;
-    align-items:center;
-    justify-content: center; 
-    margin: 50px auto;
-    flex-direction: column;
+    margin: 0px auto;
 }
 #vids {
     display: flex;
-    align-items:center;
+    align-items:flex-start;
     justify-content: center;
     flex-direction: column;
-    margin: 20px auto;
+    background-color: #FFD800;
+}
+#vids li {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 5px;
+}
+#vids li div {
+    margin-left: 10px;
+    background-color: white;
+}
+.label-vid{
+    color: black;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 #nextr {
     padding: 20px 40px;
-    border: 0;
+    border: 2px solid black;
     font-size: 24px;
-    color:white;
+    color:black;
+    background: #FFD800
 }
 #zoom {
     border: 0;

@@ -37,6 +37,8 @@ class Slider extends Component {
         return (
          <div className='Slider'>
             <img src={this.state.currentImg} />
+            <div class="centered"><h1>مؤسسة بصائر</h1></div>
+            <div class="centered-x"><h1>مؤسسة بصائر</h1></div>
          </div> 
         )
     }

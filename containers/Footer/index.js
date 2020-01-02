@@ -5,7 +5,8 @@ class Footer extends Component {
     render() {
         return (
             <div id='foot'>
-                <strong>Convey The Call</strong>
+                <strong>Convey The Call !</strong>
+                <p>convey from me even at least one verse - prophet Muhammad (pbuh).</p>
             </div>
         );
     }

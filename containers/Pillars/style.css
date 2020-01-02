@@ -1,11 +1,40 @@
+#Pillars {
+    background-image: url('http://h2.hqtexture.com/101/10027/thumbs/1458512928-1.jpg');
+    background-size: contain;
+    background-position: center;
+}
 #Pillars ul{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
+    padding: 10px;
 }
-#Pillars ul li {
-    border: 5px solid black;
-    height: 440px;
-    display: block;
+#Pillar #description *{
+    color: white;
+}
+#Pillar #thumb img{
+    width: 100%;
+}
+#thumb{
+    max-width: 100%;
+    height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #000000;
+    border: 1px solid #FFD800;
+    /* border-radius: 4px; */
+}
+#description{
+    border: 1px solid #FFD800;
+    padding: 12px 20px 20px;
+    background-color: black;
+}
+#Pillar{
+    border: 5px solid #FFD800;
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    flex-basis: 303.333px;
+    margin: 0 5px;
 }

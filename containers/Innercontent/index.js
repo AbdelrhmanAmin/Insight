@@ -8,11 +8,11 @@ class Innercontent extends Component {
             "https://www.dailymotion.com/embed/video/x3b7zr2"  ],
         currV: '',
         count: 0,
-        widthx: 50,
+        widthx: 80,
         heightx: 50,
-        widthy: 560,
-        heighty: 560,
-        widthz: 50,
+        widthy: 750,
+        heighty: 550,
+        widthz: 80,
         heightz: 50,
     }
     componentWillMount = () => {
@@ -68,17 +68,71 @@ class Innercontent extends Component {
         }
     render() {
         return (
-            <div>
-                <ul id='videoShow'>
-                    <li><iframe width={this.state.widthy} height={this.state.heighty} src={this.state.currV}></iframe></li>
-                        <button onClick={this.Vext} id='nextr'>Next</button>
+            <div id='grid-vid'>
+                <ul id='vids'>
+                    <li>
+                        <iframe width={this.state.widthx} height={this.state.heightx} src={this.state.arr[1]}></iframe>
+                        <div>
+                            <p class='label-vid'>Sample video</p>
+                            <p>duration time</p>
+                        </div>
+                    </li>
+                    <li>
+                        <iframe width={this.state.widthz} height={this.state.heightz} src={this.state.arr[2]}></iframe>
+                        <div>
+                            <p class='label-vid'>Sample video</p>
+                            <p>duration time</p>
+                        </div>
+                    </li>
+                    <li>
+                        <iframe width={this.state.widthx} height={this.state.heightx} src={this.state.arr[1]}></iframe>
+                        <div>
+                            <p class='label-vid'>Sample video</p>
+                            <p>duration time</p>
+                        </div>
+                    </li>
+                    <li>
+                        <iframe width={this.state.widthz} height={this.state.heightz} src={this.state.arr[2]}></iframe>
+                        <div>
+                            <p class='label-vid'>Sample video</p>
+                            <p>duration time</p>
+                        </div>
+                    </li>
+                    <li>
+                        <iframe width={this.state.widthx} height={this.state.heightx} src={this.state.arr[1]}></iframe>
+                        <div>
+                            <p class='label-vid'>Sample video</p>
+                            <p>duration time</p>
+                        </div>
+                    </li>
+                    <li>
+                        <iframe width={this.state.widthz} height={this.state.heightz} src={this.state.arr[2]}></iframe>
+                        <div>
+                            <p class='label-vid'>Sample video</p>
+                            <p>duration time</p>
+                        </div>
+                    </li>
+                    <li>
+                        <iframe width={this.state.widthx} height={this.state.heightx} src={this.state.arr[1]}></iframe>
+                        <div>
+                            <p class='label-vid'>Sample video</p>
+                            <p>duration time</p>
+                        </div>
+                    </li>
+                    <li>
+                        <iframe width={this.state.widthz} height={this.state.heightz} src={this.state.arr[2]}></iframe>
+                        <div>
+                            <p class='label-vid'>Sample video</p>
+                            <p>duration time</p>
+                        </div>
+                    </li>
                 </ul>
-                        <ul id='vids'>
-                            <li ><iframe width={this.state.widthx} height={this.state.heightx} src={this.state.arr[1]}></iframe>
-                    <button onClick={this.widthX} id='zoom'>ZOOM(in-out)</button></li>
-                            <li><iframe width={this.state.widthz} height={this.state.heightz} src={this.state.arr[2]}></iframe>
-                    <button onClick={this.widthZ} id='zoom'>ZOOM(in-out)</button></li>
-                        </ul>
+                <ul id='videoShow'>
+                    <li>
+                        <iframe width={this.state.widthy} height={this.state.heighty} src={this.state.currV}></iframe>
+                    </li>
+                </ul>
+                
             </div>
         );
     }

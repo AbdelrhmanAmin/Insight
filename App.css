@@ -135,7 +135,12 @@ input.error {
   font-weight: lighter;
 }
 .body {
-  background-color: white;
+  background-color: #f6e7c8;
+  /* background-image: url('http://h2.hqtexture.com/104/10311/1458552440-diamonds-yellow-blue.jpg'); */
+  background-position: center;
+  /* background-size: cover; */
+  height: 100%;
+  background-repeat: no-repeat;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGUlEQVQ4y2NgoBJwoJAedcGoC0ZdMOAuAABF0hABJ/8lyQAAAABJRU5ErkJggg==);
   background-attachment: fixed;
 }

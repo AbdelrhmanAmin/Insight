@@ -7,7 +7,7 @@ class index extends Component {
         Hijri: [],
     }
     componentDidMount = () => {
-        fetch('http://api.aladhan.com/v1/gToHCalendar/4/2019')
+        fetch('http://api.aladhan.com/v1/gToHCalendar/1/2020')
         .then(results => {
             return results.json();
         }).then(res => {
@@ -22,12 +22,13 @@ class index extends Component {
             var day = date.getDate();
             var monthIndex = date.getMonth();
             var year = date.getFullYear();
-            let currDate =  (monthIndex > 8 ? "0" + day + '-' + monthNames[monthIndex] + '-' + year : day + '-' + monthNames[monthIndex] + '-' + year);
+            let currDate =  (monthIndex > 8 ? "0" +day + '-' + monthNames[monthIndex] + '-' + year :  '0' + day + '-' + monthNames[monthIndex] + '-' + year);
             console.log(monthIndex);
             let Hijri = res.data.map((x) => {
+                console.log(x, currDate)
                 if(x.gregorian.date === currDate){
                 return(
-                    <strong id='par'>{x.hijri.year} - {x.hijri.month.en} - {x.hijri.day}</strong>
+                    <strong id='par'>{x.hijri.year} - {x.hijri.month.ar} ({x.hijri.month.en}) - {x.hijri.day}</strong>
                 )}
             })
             this.setState({Hijri: Hijri})
@@ -37,7 +38,7 @@ class index extends Component {
     render() {
         return (
             <div id='div'>
-            <iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/63224826&color=%23ffd800&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/58244249&color=%23ffd800&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=false"></iframe>
                 {this.state.Hijri}
                     {/* <ul id='form-l'>
                         <li><button  onClick={this.props.onLogin}>Login</button></li>
